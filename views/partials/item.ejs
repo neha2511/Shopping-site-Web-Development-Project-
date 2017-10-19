@@ -1,0 +1,20 @@
+<li>
+	<figure>
+		<a class="aa-product-img" href="/product-detail/<%= item.id %>"><img src="<%= item.imgUrl %>" alt="item img"></a>
+		<figcaption>
+			<h4 class="aa-product-title"><a href="/product-detail/<%= item.id %>"><%= item.title %></a></h4>
+			<span class="aa-product-price">$<%= item.price %></span>
+		</figcaption>
+	</figure>
+	<div class="aa-product-hvr-content">
+		<a href="#" data-toggle2="tooltip" data-placement="top" title="Quick View" data-toggle="modal" data-target="#<%= item.id %>"><span class="fa fa-search"></span></a>
+	</div>
+	<!-- product badge -->
+	<% if (item.badge === "soldout") { %>
+		<span class="aa-badge aa-sold-out" href="#">Sold Out!</span>
+	<% } else if (item.badge === "sale") { %>
+		<span class="aa-badge aa-sale" href="#">SALE!</span>
+	<% } else if (item.badge === "hot") { %>
+		<span class="aa-badge aa-hot" href="#">HOT!</span>
+	<% } %>
+</li>

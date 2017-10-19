@@ -1,0 +1,46 @@
+<div class="modal fade" id="<%= item.id %>" data-toggle="quick-view-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<div class="row">
+					<!-- Modal view slider -->
+					<div class="col-md-6 col-sm-6 col-xs-12">
+						<div class="aa-product-view-slider">
+							<div class="simpleLens-gallery-container" id="demo-1">
+								<div class="simpleLens-container">
+									<div class="simpleLens-big-image-container">
+										<a class="simpleLens-lens-image" data-lens-image="<%= item.viewSliderImgLargeUrl %>">
+										<img src="<%= item.viewSliderImgMediumUrl %>" class="simpleLens-big-image">
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Modal view content -->
+					<div class="col-md-6 col-sm-6 col-xs-12">
+						<div class="aa-product-view-content">
+							<h3><%= item.title %></h3>
+							<div class="aa-price-block">
+								<span class="aa-product-view-price">$<%= item.price %></span>
+								<p class="aa-product-avilability">Avilability: <% if (item.badge !== "soldout") { %><span>In stock</span><% } else { %><span>Sold out</span><% } %></p>
+							</div>
+							<p><%= item.description %></p>
+							<div class="aa-prod-quantity">
+								<p class="aa-prod-category">
+									Category: <%= item.category %>
+								</p>
+							</div>
+							<div class="aa-prod-view-bottom">
+								<a href="/product-detail/<%= item.id %>" class="aa-add-to-cart-btn">View Details</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>

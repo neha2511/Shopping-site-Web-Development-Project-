@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+	<% var title={ siteName: "Daily Shop", pageName: "Account"} %>
+	<% include ../partials/head %>
+	<body>
+		<!-- wpf loader Two -->
+		<div id="wpf-loader-two">
+			<div class="wpf-loader-two-inner">
+				<span>Loading</span>
+			</div>
+		</div>
+		<!-- / wpf loader Two -->       
+		<!-- SCROLL TOP BUTTON -->
+		<a class="scrollToTop" href="#"><i class="fa fa-chevron-up"></i></a>
+		<!-- END SCROLL TOP BUTTON -->
+		<!-- Start header section -->
+		<% include ../partials/header %>
+		<!-- / header section -->
+		<!-- menu -->
+		<section id="menu">
+			<div class="container">
+				<div class="menu-area">
+					<!-- Navbar -->
+					<div class="navbar navbar-default" role="navigation">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							</button>          
+						</div>
+						<div class="navbar-collapse collapse">
+							<!-- Left nav -->
+							<% include ../partials/nav %>
+						</div>
+						<!--/.nav-collapse -->
+					</div>
+				</div>
+			</div>
+			</div>
+		</section>
+		<!-- / menu -->  
+		<!-- catg header banner section -->
+		<section id="aa-catg-head-banner">
+			<img src="/img/fashion/fashion-header-bg-8.jpg" alt="fashion img">
+			<div class="aa-catg-head-banner-area">
+				<div class="container">
+					<div class="aa-catg-head-banner-content">
+						<h2>Account Page</h2>
+						<ol class="breadcrumb">
+							<li><a href="index.html">Home</a></li>
+							<li class="active">Account</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- / catg header banner section -->
+		<!-- Cart view section -->
+		<section id="aa-myaccount">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="aa-myaccount-area">
+							<div class="row">
+								<% if (typeof warning !== 'undefined') { %>
+									<div class="alert alert-warning">
+										<strong><%= warning %></strong>
+									</div>
+								<% } %>
+								<div class="col-md-6">
+									<div class="aa-myaccount-login">
+										<h4>Login</h4>
+										<form id="loginForm" action="" class="aa-login-form">
+											<label for="">Username<span>*</span></label>
+											<input name="username" type="text" placeholder="Username" required />
+											<label for="">Password<span>*</span></label>
+											<input name="password" type="password" placeholder="Password" required />
+											<button type="submit" class="aa-browse-btn">Login</button>
+										</form>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="aa-myaccount-register">
+										<h4>Register</h4>
+										<form id="registerForm" action="" class="aa-login-form">
+											<label for="">Username<span>*</span></label>
+											<input name="username" type="text" placeholder="Username" required />
+											<label for="">Real name<span>*</span></label>
+											<input name="name" type="text" placeholder="Real name" required />
+											<label for="">Email address<span>*</span></label>
+											<input name="email" type="text" placeholder="Email" required />
+											<label for="">Password<span>*</span></label>
+											<input name="password" type="password" placeholder="Password" required />
+											<button type="submit" class="aa-browse-btn">Register</button>                    
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- / Cart view section -->
+		<!-- footer -->  
+		<% include ../partials/footer %>
+		<!-- / footer -->
+		<!-- Login Modal -->  
+		<% include ../partials/login-modal %>
+		<% include ../partials/js %>
+	</body>
+</html>

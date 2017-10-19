@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+	<% var title={ siteName: "Daily Shop", pageName: "404"} %>
+	<% include ../partials/head %>
+	<body>
+		<!-- wpf loader Two -->
+		<div id="wpf-loader-two">
+			<div class="wpf-loader-two-inner">
+				<span>Loading</span>
+			</div>
+		</div>
+		<!-- / wpf loader Two -->       
+		<!-- SCROLL TOP BUTTON -->
+		<a class="scrollToTop" href="#"><i class="fa fa-chevron-up"></i></a>
+		<!-- END SCROLL TOP BUTTON -->
+		<!-- Start header section -->
+		<% include ../partials/header %>
+		<!-- / header section -->
+		<!-- menu -->
+		<section id="menu">
+			<div class="container">
+				<div class="menu-area">
+					<!-- Navbar -->
+					<div class="navbar navbar-default" role="navigation">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							</button>          
+						</div>
+						<div class="navbar-collapse collapse">
+							<!-- Left nav -->
+							<% include ../partials/nav %>
+						</div>
+						<!--/.nav-collapse -->
+					</div>
+				</div>
+			</div>
+			</div>
+		</section>
+		<!-- / menu -->  
+		<!-- 404 error section -->
+		<section id="aa-error">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="aa-error-area">
+							<h2>404</h2>
+							<span>Sorry! Page Not Found</span>
+							<p>Sorry this content has been moved Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, amet perferendis, nemo facere excepturi quis.</p>
+							<a href="index"> Go to Homepage</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- / 404 error section -->
+		<!-- Subscribe section -->
+		<section id="aa-subscribe">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="aa-subscribe-area">
+							<h3>Subscribe our newsletter </h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, velit!</p>
+							<form action="" class="aa-subscribe-form">
+								<input type="email" name="" id="" placeholder="Enter your Email">
+								<input type="submit" value="Subscribe">
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- / Subscribe section -->
+		<!-- footer -->  
+		<% include ../partials/footer %>
+		<!-- / footer -->
+		<!-- Login Modal -->  
+		<% include ../partials/login-modal %>
+		<% include ../partials/js %>
+	</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+	<% var title={ siteName: "Daily Shop", pageName: "Product Details"} %>
+	<% include ../partials/head %>
+	<body>
+		<!-- wpf loader Two -->
+		<div id="wpf-loader-two">
+			<div class="wpf-loader-two-inner">
+				<span>Loading</span>
+			</div>
+		</div>
+		<!-- / wpf loader Two -->       
+		<!-- SCROLL TOP BUTTON -->
+		<a class="scrollToTop" href="#"><i class="fa fa-chevron-up"></i></a>
+		<!-- END SCROLL TOP BUTTON -->
+		<!-- Start header section -->
+		<% include ../partials/header %>
+		<!-- / header section -->
+		<!-- menu -->
+		<section id="menu">
+			<div class="container">
+				<div class="menu-area">
+					<!-- Navbar -->
+					<div class="navbar navbar-default" role="navigation">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							</button>          
+						</div>
+						<div class="navbar-collapse collapse">
+							<!-- Left nav -->
+							<% include ../partials/nav %>
+						</div>
+						<!--/.nav-collapse -->
+					</div>
+				</div>
+			</div>
+			</div>
+		</section>
+		<!-- / menu -->  
+		<!-- catg header banner section -->
+		<section id="aa-catg-head-banner">
+			<img src="/img/fashion/fashion-header-bg-8.jpg" alt="fashion img">
+			<div class="aa-catg-head-banner-area">
+				<div class="container">
+					<div class="aa-catg-head-banner-content">
+						<h2><%= item.title %></h2>
+						<ol class="breadcrumb">
+							<li><a href="index">Home</a></li>
+							<li><a href="#">Product</a></li>
+							<li class="active"><%= item.title %></li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- / catg header banner section -->
+		<!-- product category -->
+		<section id="aa-product-details">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="aa-product-details-area">
+							<div class="aa-product-details-content">
+								<div class="row">
+									<!-- Modal view slider -->
+									<div class="col-md-5 col-sm-5 col-xs-12">
+										<div class="aa-product-view-slider">
+											<div id="demo-1" class="simpleLens-gallery-container">
+												<div class="simpleLens-container">
+													<div class="simpleLens-big-image-container"><a data-lens-image="<%= item.viewSliderImgLargeUrl %>" class="simpleLens-lens-image"><img src="<%= item.viewSliderImgMediumUrl %>" class="simpleLens-big-image"></a></div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Modal view content -->
+									<div class="col-md-7 col-sm-7 col-xs-12">
+										<div class="aa-product-view-content">
+											<h3><%= item.title %></h3>
+											<div class="aa-price-block">
+												<span class="aa-product-view-price">$<%= item.price %></span>
+												<p class="aa-product-avilability">Avilability: <% if (item.badge !== "soldout") { %><span>In stock</span><% } else { %><span>Sold out</span><% } %></p>
+											</div>
+											<p><%= item.description %></p>
+											<div class="aa-prod-quantity">
+												<p class="aa-prod-category">
+													Category: <a href="#"><%= item.category %></a>
+												</p>
+											</div>
+											<div class="aa-prod-view-bottom">
+												<a class="aa-add-to-cart-btn" href="#">Watchlist</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="aa-product-details-bottom">
+								<ul class="nav nav-tabs" id="myTab2">
+									<li><a href="#description" data-toggle="tab">Description</a></li>
+								</ul>
+								<!-- Tab panes -->
+								<div class="tab-content">
+									<div class="tab-pane fade in active" id="description">
+										<%= item.description %>
+									</div>
+								</div>
+							</div>
+							<!-- Related product -->
+							<div class="aa-product-related-item">
+								<h3>Related Products</h3>
+								<ul class="aa-product-catg aa-related-item-slider">
+									<% related.forEach(function(item){ %>
+										<!-- start single product item -->
+										<% include ../partials/item %>
+									<% }); %>
+								</ul>
+								<!-- quick view modal -->  
+								<% related.forEach(function(item){ %>
+									<!-- start single product item -->
+									<% include ../partials/quick-view-modal %>
+								<% }); %>
+								<!-- / quick view modal -->   
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- / product category -->
+		<!-- Subscribe section -->
+		<section id="aa-subscribe">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="aa-subscribe-area">
+							<h3>Subscribe our newsletter </h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, velit!</p>
+							<form action="" class="aa-subscribe-form">
+								<input type="email" name="" id="" placeholder="Enter your Email">
+								<input type="submit" value="Subscribe">
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- / Subscribe section -->
+		<!-- footer -->  
+		<% include ../partials/footer %>
+		<!-- / footer -->
+		<!-- Login Modal -->  
+		<% include ../partials/login-modal %>
+		<% include ../partials/js %>
+	</body>
+</html>

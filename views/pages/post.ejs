@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<% var title={ siteName: "Daily Shop", pageName: "Post"} %>
+    <% include ../partials/head %>
+        <style>
+            .aa-product-post input[type=text],
+            select {
+                width: 100%;
+                padding: 12px 20px;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+                margin-bottom: 15px;
+            }
+            
+            .aa-product-post button[type=submit] {
+                width: 100%;
+                background-color: #a5d549;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                margin-top: 15px;
+            }
+            
+            .aa-product-post button[type=submit]:hover {
+                background-color: #a5d549;
+            }
+            
+            div.aa-product-post {
+                border-radius: 5px;
+                background-color: #f2f2f2;
+                padding: 40px;
+                margin-top: 50px;
+                margin-bottom: 50px;
+            }
+        </style>
+
+        <body>
+            <!-- wpf loader Two -->
+            <div id="wpf-loader-two">
+                <div class="wpf-loader-two-inner">
+                    <span>Loading</span>
+                </div>
+            </div>
+            <!-- / wpf loader Two -->
+            <!-- SCROLL TOP BUTTON -->
+            <a class="scrollToTop" href="#"><i class="fa fa-chevron-up"></i></a>
+            <!-- END SCROLL TOP BUTTON -->
+            <!-- Start header section -->
+            <% include ../partials/header %>
+                <!-- / header section -->
+                <!-- menu -->
+                <section id="menu">
+                    <div class="container">
+                        <div class="menu-area">
+                            <!-- Navbar -->
+                            <div class="navbar navbar-default" role="navigation">
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							</button>
+                                </div>
+                                <div class="navbar-collapse collapse">
+                                    <!-- Left nav -->
+                                    <% include ../partials/nav %>
+                                </div>
+                                <!--/.nav-collapse -->
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+                <!-- / menu -->
+
+                <!-- product category -->
+                <section id="aa-post">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+								<% if (typeof warning !== 'undefined') { %>
+									<div class="alert alert-danger">
+										<strong><%= warning %></strong> You won't be able to post item for now.
+									</div>
+								<% } %>
+                                <div class="aa-product-post">
+                                    <form id="postItemForm" action="" method="">
+                                        <label for="title">Title:</label>
+                                        <input name="title" type="text" id="title" name="title" required />
+                                        <label for="price">Price: $</label>
+                                        <input name="price" type="text" id="price" name="price" required />
+                                        <label for="category">Category:</label>
+                                        <select id="category" name="category">
+                                            <option value="Furnitures">Furnitures</option>
+                                            <option value="Electronics">Electronics</option>
+                                        </select>
+                                        <label for="description">Description:</label>
+                                        <input name="description" type="text" id="description" name="description" /required>
+                                        <label for="imgUrl">imgUrl:</label>
+                                        <input name="imgUrl" type="text" id="imgUrl" name="imgUrl">
+                                        <label for="viewSliderImgMediumUrl">viewSliderImgMediumUrl:</label>
+                                        <input name="viewSliderImgMediumUrl" type="text" id="viewSliderImgMediumUrl" name="viewSliderImgMediumUrl">
+                                        <label for="viewSliderImgLargeUrl">viewSliderImgLargeUrl:</label>
+                                        <input name="viewSliderImgLargeUrl" type="text" id="viewSliderImgLargeUrl" name="viewSliderImgLargeUrl">
+                                        <button type="submit">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- / product category -->
+
+                <!-- footer -->
+                <% include ../partials/footer %>
+                    <!-- / footer -->
+                    <!-- Login Modal -->
+                    <% include ../partials/login-modal %>
+                        <% include ../partials/js %>
+        </body>
+
+</html>
