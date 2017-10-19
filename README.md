@@ -1,4 +1,4 @@
-# CS546 Final Project
+Web Development Project
 
 This is the final project repo of CS546 for our group.
 
@@ -6,7 +6,7 @@ _YOU MUST TRACK ALL DOCUMENTS AND CODE IN THIS REPO!_
 
 You can find our proposal [HERE](https://docs.google.com/document/d/18Yc0W3OYErl1smIPDNaWYc54Oja9aaCOl7uuOPYHFZw/edit?usp=sharing "Project Proposal").
 
-Master branch is shipped and deployed by: [![codeship](https://codeship.com/projects/201c57d0-ccfe-0133-6b71-7a44370e5504/status?branch=master)](https://codeship.com/projects/140416)
+
 
 To: [![Heroku](https://heroku-badge.herokuapp.com/?app=cs546&style=flat)](https://cs546.herokuapp.com/)
 
@@ -49,13 +49,6 @@ Depending on the size of the project, if it is small and simple enough the refer
 
 Describe and show how to run the tests with code examples.
 
-## Contributors
-
-* [Haocen Xu](mailto:haocen.xu@gmail.com)
-* [Madhurya Sarkar](mailto: madhuryasarkar1993@gmail.com)
-* [Yashila Puthran](mailto:y.puthran01@gmail.com)
-* [Yumeng Song](mailto:ymeng.song@gmail.com)
-* [Neha D Anandpara](mailto:neha.anandpara1@gmail.com) 
 
 ## License //TBD
 
