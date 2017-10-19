@@ -4,7 +4,7 @@ This is the final project repo of CS546 for our group.
 
 _YOU MUST TRACK ALL DOCUMENTS AND CODE IN THIS REPO!_ 
 
-You can find our proposal [HERE](https://docs.google.com/document/d/18Yc0W3OYErl1smIPDNaWYc54Oja9aaCOl7uuOPYHFZw/edit?usp=sharing "Project Proposal").
+
 
 
 
