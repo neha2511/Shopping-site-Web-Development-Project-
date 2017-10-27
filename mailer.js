@@ -4,16 +4,6 @@ var key = require('./config').mailgun_key;
 var mg = new (require('mailgun')).Mailgun(key);
 var site = require('./config').site_domain;
 
-// Code by Haocen.xu@gmail.com
-
-/*mg.sendText('noreply@hushtek.tk',
-	['haocen.xu@gmail.com'],
-	'Behold the wonderous power of email!',
-	'Email validation test.',
-	function(err) {
-		err && console.log(err)
-	});*/
-
 function sendVerifyMail(user) {
 	if(!user){
 		return Promise.reject("Invalid user.");
